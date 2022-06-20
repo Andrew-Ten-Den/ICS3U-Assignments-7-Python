@@ -10,13 +10,22 @@ import random
 def merged(random_numbers1, random_numbers2):
     # this merges the two lists
     combined = []
+    # x and y represent the position in the list
+    list_counter1 = 0
+    x = 0
+    list_counter2 = 0
+    y = 0
 
-    combined.append(random_numbers1[0])
-    combined.append(random_numbers1[1])
-    combined.append(random_numbers1[2])
-    combined.append(random_numbers2[0])
-    combined.append(random_numbers2[1])
-    combined.append(random_numbers2[2])
+    while list_counter1 < len(random_numbers1):
+        combined.append(random_numbers1[x])
+        list_counter1 = list_counter1 + 1
+        x = x + 1
+
+    while list_counter2 < len(random_numbers2):
+        combined.append(random_numbers2[y])
+        list_counter2 = list_counter2 + 1
+        y = y + 1
+
     return combined
 
 
